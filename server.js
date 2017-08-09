@@ -9,6 +9,11 @@ app.get('/articleone', function (req, res) {
   res.send("article oneis requested");
 });
 
+pp.get('/articletwo', function (req, res) {
+  res.send("article two is  requested");
+});
+
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });

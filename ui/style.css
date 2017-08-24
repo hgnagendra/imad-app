@@ -16,6 +16,15 @@ body {
     font-weight: bold;
 }
 
+        .container {
+        max-width: 800px;
+        margin: 0 auto; 
+        color: green;
+        font-family: ariel-black;
+        }
+        
+
+
 .img-medium {
     height: 200px;
 }

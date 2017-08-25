@@ -33,8 +33,8 @@ var article = {
    
 },
     'article-two' : {
-        title: 'artielce-one nagendra',
-   heading:'artile - one',
+        title: 'artielce-Two nagendra',
+   heading:'artile - TWO',
    date: '12-august 2017',
    content: `<div>
     <p>
@@ -60,8 +60,8 @@ var article = {
 },
      
     'article-three':  {
-        title: 'artielce-one nagendra',
-   heading:'artile - one',
+        title: 'artielce-Three nagendra',
+   heading:'artile - Three',
    date: '12-august 2017',
    content: `<div>
     <p>

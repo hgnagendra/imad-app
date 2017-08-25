@@ -38,7 +38,7 @@ function createtemplete(data) {
    var content=data.content;
    var heading=data.heading;
 
-var htmltemple= `
+var htmltemplete= `
  <html>
     <head>
         <title>

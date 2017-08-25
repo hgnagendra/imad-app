@@ -38,8 +38,7 @@ function createtemplete(data) {
    var content=data.content;
    var heading=data.heading;
 
-
-htmltemplete= `
+var htmltemplete= `
  <html>
     <head>
         <title>
@@ -84,7 +83,6 @@ htmltemplete= `
 return htmltemplete;
 
 }
-
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));

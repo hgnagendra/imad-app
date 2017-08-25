@@ -5,13 +5,91 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+var article_one = {
+   title: 'artielce-one nagendra',
+   heading:'artile - one',
+   date: '12-august 2017',
+   content: `<div>
+    <p>
+        My Name is nagendra working in NIEIT, Mysuru, My Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysurMy Name is nagendra working in NIEIT, MysuruuMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, Mysuru
+        
+    </p>
+    </div>
+    <div>
+    <p>
+        My Name is nagendra working in NIEIT, Mysuru, My Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysurMy Name is nagendra working in NIEIT, MysuruuMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, Mysuru
+        
+    </p>
+    </div>
+    
+    <div>
+    <p>
+        My Name is nagendra working in NIEIT, Mysuru, My Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysurMy Name is nagendra working in NIEIT, MysuruuMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, Mysuru
+        
+    </p>
+    </div>`
+   
+   
+};
+
+function createtemplete(data) {
+   var title=data.title;
+   var date=data.date;
+   var content=data.content;
+   var heading=data.heading;
+
+var htmltemple= `
+ <html>
+    <head>
+        <title>
+            ${title}
+        </title>
+    
+        <link href="/ui/style.css" rel="stylesheet" />
+    
+    
+    </head>
+    
+
+<body>
+    
+    <div class="container">
+    <div>
+        <a href="/"> Home </a>
+    </div>
+    <hr/>
+    <h3>
+        ${heading}
+    </h3>
+    <div>
+    ${date}
+    </div>
+        
+    <div>
+    ${content}
+    </div>
+    
+</body>
+    
+ </html>
+
+ 
+    
+    
+    
+    
+    
+`;
+return htmltemplete;
+
+}
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
 app.get('/article-one', function(req, res) {
-   res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
+   res.send(cratetemplete(article_one));
    
   });
 

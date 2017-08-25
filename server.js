@@ -89,7 +89,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/article-one', function(req, res) {
-   res.send(cratetemplete(article_one));
+   res.send(createtemplete(article_one));
    
   });
 

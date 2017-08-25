@@ -7,85 +7,41 @@ app.use(morgan('combined'));
 
 var article = {
     'article-one': {
-   title: 'artielce-one nagendra',
-   heading:'artile - one',
-   date: '12-august 2017',
-   content: `<div>
-    <p>
-        My Name is nagendra working in NIEIT, Mysuru, My Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysurMy Name is nagendra working in NIEIT, MysuruuMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, Mysuru
-        
-    </p>
-    </div>
-    <div>
-    <p>
-        My Name is nagendra working in NIEIT, Mysuru, My Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysurMy Name is nagendra working in NIEIT, MysuruuMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, Mysuru
-        
-    </p>
-    </div>
-    
+        title: 'artielce-one nagendra',
+        heading:'artile - one',
+        date: '12-august 2017',
+        content: `
     <div>
     <p>
         My Name is nagendra working in NIEIT, Mysuru, My Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysurMy Name is nagendra working in NIEIT, MysuruuMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, Mysuru
         
     </p>
     </div>`
-   
-   
-},
+ },
     'article-two' : {
         title: 'artielce-Two nagendra',
-   heading:'artile - TWO',
-   date: '12-august 2017',
-   content: `<div>
-    <p>
-        My Name is nagendra working in NIEIT, Mysuru, My Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysurMy Name is nagendra working in NIEIT, MysuruuMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, Mysuru
-        
-    </p>
-    </div>
-    <div>
-    <p>
-        My Name is nagendra working in NIEIT, Mysuru, My Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysurMy Name is nagendra working in NIEIT, MysuruuMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, Mysuru
-        
-    </p>
-    </div>
-    
+        heading:'artile - TWO',
+        date: '12-august 2017',
+        content: `
     <div>
     <p>
         My Name is nagendra working in NIEIT, Mysuru, My Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysurMy Name is nagendra working in NIEIT, MysuruuMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, Mysuru
         
     </p>
     </div>`
-   
-   
 },
-     
     'article-three':  {
         title: 'artielce-Three nagendra',
    heading:'artile - Three',
    date: '12-august 2017',
-   content: `<div>
-    <p>
-        My Name is nagendra working in NIEIT, Mysuru, My Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysurMy Name is nagendra working in NIEIT, MysuruuMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, Mysuru
-        
-    </p>
-    </div>
-    <div>
-    <p>
-        My Name is nagendra working in NIEIT, Mysuru, My Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysurMy Name is nagendra working in NIEIT, MysuruuMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, Mysuru
-        
-    </p>
-    </div>
-    
+   content: `
     <div>
     <p>
         My Name is nagendra working in NIEIT, Mysuru, My Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysurMy Name is nagendra working in NIEIT, MysuruuMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, Mysuru
         
     </p>
     </div>`
-   
-   
-}
-        
+   }
     };
 
 function createtemplete(data) {
@@ -106,7 +62,6 @@ var htmltemplete= `
     
     </head>
     
-
 <body>
     
     <div class="container">
@@ -130,11 +85,6 @@ var htmltemplete= `
  </html>
 
  
-    
-    
-    
-    
-    
 `;
 return htmltemplete;
 
@@ -145,9 +95,10 @@ app.get('/', function (req, res) {
 });
 
 app.get('/:articlename', function(req, res) {
+    //articlename==article-one
     var articlename=req.params.articlename;
    res.send(createtemplete(article[articlename]));
-   
+   //article[articlename]==artcicle[article-one]
   });
 
 

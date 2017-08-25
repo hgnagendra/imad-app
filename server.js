@@ -5,7 +5,8 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var article_one = {
+var article = {
+    'article-one': {
    title: 'artielce-one nagendra',
    heading:'artile - one',
    date: '12-august 2017',
@@ -30,7 +31,62 @@ var article_one = {
     </div>`
    
    
-};
+},
+    'article-two' : {
+        title: 'artielce-one nagendra',
+   heading:'artile - one',
+   date: '12-august 2017',
+   content: `<div>
+    <p>
+        My Name is nagendra working in NIEIT, Mysuru, My Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysurMy Name is nagendra working in NIEIT, MysuruuMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, Mysuru
+        
+    </p>
+    </div>
+    <div>
+    <p>
+        My Name is nagendra working in NIEIT, Mysuru, My Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysurMy Name is nagendra working in NIEIT, MysuruuMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, Mysuru
+        
+    </p>
+    </div>
+    
+    <div>
+    <p>
+        My Name is nagendra working in NIEIT, Mysuru, My Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysurMy Name is nagendra working in NIEIT, MysuruuMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, Mysuru
+        
+    </p>
+    </div>`
+   
+   
+},
+     
+    'article-three':  {
+        title: 'artielce-one nagendra',
+   heading:'artile - one',
+   date: '12-august 2017',
+   content: `<div>
+    <p>
+        My Name is nagendra working in NIEIT, Mysuru, My Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysurMy Name is nagendra working in NIEIT, MysuruuMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, Mysuru
+        
+    </p>
+    </div>
+    <div>
+    <p>
+        My Name is nagendra working in NIEIT, Mysuru, My Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysurMy Name is nagendra working in NIEIT, MysuruuMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, Mysuru
+        
+    </p>
+    </div>
+    
+    <div>
+    <p>
+        My Name is nagendra working in NIEIT, Mysuru, My Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysurMy Name is nagendra working in NIEIT, MysuruuMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, Mysuru
+        
+    </p>
+    </div>`
+   
+   
+}
+        
+    };
 
 function createtemplete(data) {
    var title=data.title;
@@ -88,12 +144,14 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/article-one', function(req, res) {
-   res.send(createtemplete(article_one));
+app.get('/:articlename', function(req, res) {
+    var articlename=req.params.articlename;
+   res.send(createtemplete(article[articlename]));
    
   });
 
-app.get('/article-two', function(req, res) {
+
+/*app.get('/article-two', function(req, res) {
    res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
 });
 
@@ -104,7 +162,7 @@ app.get('/article-three', function(req, res) {
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
-});
+}); */
 
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));

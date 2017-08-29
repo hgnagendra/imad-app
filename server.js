@@ -52,7 +52,7 @@ var article = {
     </div>`
    }
     };
-/*
+
 function createtemplete(data) {
   var title =data.title;
    var date =data.date;
@@ -96,7 +96,7 @@ var htmltemplete= `
 `;
 return htmltemplete;
 
-}*/
+}
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
@@ -117,14 +117,14 @@ app.get('/hgnagendra.db',function (req,res) {
     });
 });
 
-/*
+
 app.get('/:articlename', function(req, res) {
     //articlename==article-one
     var articlename=req.params.articlename;
    res.send(createtemplete(article[articlename]));
    //article[articlename]==artcicle[article-one]
   });
-*/
+
 
 /*app.get('/article-two', function(req, res) {
    res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));

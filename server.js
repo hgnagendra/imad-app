@@ -109,13 +109,13 @@ var pool= new pool(config);
 
 app.get('/test.db',function (req,res) {
     
-    pool.query(SELECT * FROM test, function(err,res) {
+    pool.query('SELECT * FROM test', function(err,res) {
        if (err) {
            res.status(500).send(error.tostring());
        }else {
-           res.send(JSON.stringresult());
+           res.send(JSON.stringify(result));
        }
-       }
+       
         
     });
 });

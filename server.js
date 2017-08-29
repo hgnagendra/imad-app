@@ -14,8 +14,6 @@ var app = express();
 app.use(morgan('combined'));
 
 
-
-
 var article = {
     'article-one': {
         title: 'artielce-one nagendra',
@@ -54,7 +52,7 @@ var article = {
     </div>`
    }
     };
-
+/*
 function createtemplete(data) {
   var title =data.title;
    var date =data.date;
@@ -98,7 +96,7 @@ var htmltemplete= `
 `;
 return htmltemplete;
 
-}
+}*/
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));

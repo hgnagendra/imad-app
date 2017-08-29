@@ -117,13 +117,14 @@ app.get('/test.db',function (req,res) {
     });
 });
 
+/*
 app.get('/:articlename', function(req, res) {
     //articlename==article-one
     var articlename=req.params.articlename;
    res.send(createtemplete(article[articlename]));
    //article[articlename]==artcicle[article-one]
   });
-
+*/
 
 /*app.get('/article-two', function(req, res) {
    res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));

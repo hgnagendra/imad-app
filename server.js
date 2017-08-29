@@ -14,47 +14,6 @@ var app = express();
 app.use(morgan('combined'));
 
 
-
-
-var article = {
-    'article-one': {
-        title: 'artielce-one nagendra',
-        heading:'artile - one',
-        date: '12-august 2017',
-        content: `
-    <div>
-    <p>
-        My Name is nagendra working in NIEIT, Mysuru, My Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysurMy Name is nagendra working in NIEIT, MysuruuMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, Mysuru
-        
-    </p>
-    </div>`
- },
-    'article-two' : {
-        title: 'artielce-Two nagendra',
-        heading:'artile - TWO',
-        date: '12-august 2017',
-        content: `
-    <div>
-    <p>
-        My Name is nagendra working in NIEIT, Mysuru, My Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysurMy Name is nagendra working in NIEIT, MysuruuMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, Mysuru
-        
-    </p>
-    </div>`
-},
-    'article-three':  {
-        title: 'artielce-Three nagendra',
-   heading:'artile - Three',
-   date: '12-august 2017',
-   content: `
-    <div>
-    <p>
-        My Name is nagendra working in NIEIT, Mysuru, My Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysurMy Name is nagendra working in NIEIT, MysuruuMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, Mysuru
-        
-    </p>
-    </div>`
-   }
-    };
-
 function createtemplete(data) {
   var title =data.title;
    var date =data.date;
@@ -99,6 +58,47 @@ var htmltemplete= `
 return htmltemplete;
 
 }
+
+var article = {
+    'article-one': {
+        title: 'artielce-one nagendra',
+        heading:'artile - one',
+        date: '12-august 2017',
+        content: `
+    <div>
+    <p>
+        My Name is nagendra working in NIEIT, Mysuru, My Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysurMy Name is nagendra working in NIEIT, MysuruuMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, Mysuru
+        
+    </p>
+    </div>`
+ },
+    'article-two' : {
+        title: 'artielce-Two nagendra',
+        heading:'artile - TWO',
+        date: '12-august 2017',
+        content: `
+    <div>
+    <p>
+        My Name is nagendra working in NIEIT, Mysuru, My Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysurMy Name is nagendra working in NIEIT, MysuruuMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, Mysuru
+        
+    </p>
+    </div>`
+},
+    'article-three':  {
+        title: 'artielce-Three nagendra',
+   heading:'artile - Three',
+   date: '12-august 2017',
+   content: `
+    <div>
+    <p>
+        My Name is nagendra working in NIEIT, Mysuru, My Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysurMy Name is nagendra working in NIEIT, MysuruuMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, Mysuru
+        
+    </p>
+    </div>`
+   }
+    };
+
+
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));

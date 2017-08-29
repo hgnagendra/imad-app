@@ -59,7 +59,7 @@ function createtemplete(data) {
    var content =data.content;
    var heading =data.heading;
 
-var htmltemplete= `{
+var htmltemplete= `
  <html>
     <head>
         <title>

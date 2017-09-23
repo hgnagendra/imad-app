@@ -50,6 +50,18 @@ var article = {
         
     </p>
     </div>`
+   },
+   'article-four' : {
+        title: 'artielce-Two nagendra',
+        heading:'artile - TWO',
+        date: '12-august 2017',
+        content: `
+    <div>
+    <p>
+        My Name is nagendra working in NIEIT, Mysuru, My Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysurMy Name is nagendra working in NIEIT, MysuruuMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, MysuruMy Name is nagendra working in NIEIT, Mysuru
+        
+    </p>
+    </div>`
    }
     };
 

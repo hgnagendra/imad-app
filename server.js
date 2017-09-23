@@ -52,8 +52,8 @@ var article = {
     </div>`
    },
    'article-four' : {
-        title: 'artielce-Two nagendra',
-        heading:'artile - TWO',
+        title: 'artielce-Four nagendra',
+        heading:'artile - Four',
         date: '12-august 2017',
         content: `
     <div>
